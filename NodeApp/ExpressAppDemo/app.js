@@ -1,4 +1,5 @@
 var express = require("express");
+var react = require("react");
 var app = express();
 
 // tells express to serve the public folder 
