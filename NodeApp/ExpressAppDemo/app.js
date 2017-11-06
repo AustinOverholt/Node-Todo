@@ -1,8 +1,13 @@
 var express = require("express");
 var app = express();
 
+// tells express to serve the public folder 
+app.use(express.static("public"));
+
+// ejs templating example
 app.get("/", function(req, res){
-    res.render("home.ejs");
+    var user = "Austin";
+    res.render("home.ejs", {user: user});
 });
 
 // ":" tells the app it will have a variable after 
