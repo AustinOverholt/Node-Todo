@@ -4,10 +4,19 @@ var app = express();
 // tells express to serve the public folder 
 app.use(express.static("public"));
 
+// changes it so render doesnt need to have ejs extension
+// app.set("view engine", "ejs");
+
 // ejs templating example
 app.get("/", function(req, res){
     var user = "Austin";
     res.render("home.ejs", {user: user});
+});
+
+// added a post 
+app.post("/post", function(req, res){
+    res.send("This is the post endpoint");
+    console.log("post api hit");
 });
 
 // ":" tells the app it will have a variable after 
