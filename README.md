@@ -2,5 +2,7 @@
 
 I am creating a new Node application from the ground up.
 
-I have added Express and plan to add React at some point as well. 
+I have added Express in "ExpressAppDemo"
+
+I also have a React app running in "my-app"
 
