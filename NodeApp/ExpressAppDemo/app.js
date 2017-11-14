@@ -7,7 +7,6 @@ app.use(express.static("public"));
 // serve node modules folder
 app.use("/node_modules", express.static('node_modules'));
 
-
 // changes it so render doesnt need to have ejs extension
 // app.set("view engine", "ejs");
 
@@ -58,5 +57,5 @@ app.get("/r/:name", function(req, res){
   });
 
 app.listen(3000, function(){
-    console.log("Server Started");
+    console.log("Server Started!");
 });

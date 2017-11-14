@@ -1,8 +1,36 @@
+    <!-- Edit Modal -->
+    <div id="editTodo" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Edit Todo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form name="newQuestion" ng-submit="mainCtrl.todoSubmit(newQuestion.$valid)" novalidate>
+                            <div class="form-group">
+                                <label for="Todo">Todo:</label>
+                                <p ng-show="newQuestion.Category.$invalid && !newQuestion.Category.$pristine" class="help-block">Category is required.</p>
+                            </div>
+                            <button ng-disabled="newQuestion.$invalid" type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="node_modules/angular/angular.js"></script>
 <script src="mainApp.js"></script>
 <script src="mainController.js"></script>
+<script src="mainService.js"></script>
 </body>
 </html>

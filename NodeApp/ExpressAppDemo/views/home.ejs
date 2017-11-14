@@ -35,16 +35,28 @@
 
           <!-- Todo List Container -->
           <div class="container">
-            <table class="table table-responsive">
-                <thead>
-                    <th>Todo</th>
-                    <th col-span="2">Actions</th>
-                </thead>
-                <tbody>
-                    <td></td>
-                    <td><button>Edit</button><button>Delete</button></td>
-                </tbody>
-            </table>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <textarea rows="3" class="form-control" type="text" placeholder="Todo" id="todo"></textarea>
+                            <button ng-click="mainCtrl.addTodo()" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <table class="table table-responsive">
+                        <thead>
+                            <th>Todo</th>
+                            <th col-span="2">Actions</th>
+                        </thead>
+                        <tbody>
+                            <td></td>
+                            <td><button ng-click="mainCtrl.editTodo()" class="btn btn-warning">Edit</button><button ng-click="mainCtrl.deleteTodo()" class="btn btn-danger">Delete</button></td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
           </div>
       
           <div class="container">
