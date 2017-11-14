@@ -50,8 +50,8 @@
                             <th>Todo</th>
                             <th col-span="2">Actions</th>
                         </thead>
-                        <tbody>
-                            <td></td>
+                        <tbody ng-repeat="todo in mainCtrl.todos">
+                            <td>{{todo}}</td>
                             <td><button ng-click="mainCtrl.editTodo()" class="btn btn-warning">Edit</button><button ng-click="mainCtrl.deleteTodo()" class="btn btn-danger">Delete</button></td>
                         </tbody>
                     </table>

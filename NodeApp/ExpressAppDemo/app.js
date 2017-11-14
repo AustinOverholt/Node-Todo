@@ -16,6 +16,28 @@ app.get("/", function(req, res){
     res.render("home.ejs", {user: user});
 });
 
+// store todos in array
+var todos = ["Get Milk", "Get Eggs", "Get Bread"];
+
+// gets todos
+app.get("/todo", function(req, res){
+  res.send(todos);
+});
+
+// adds todos
+app.post("/todo", function(req, res){
+  
+});
+
+// edits todos
+app.put("/todo", function(req, res){
+  
+});
+
+// deletes todos
+app.delete("/todo", function(req, res){
+  
+});
 // added a post 
 app.post("/post", function(req, res){
     res.send("This is the post endpoint");
