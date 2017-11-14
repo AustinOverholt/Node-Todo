@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
 // tells express to serve the public folder 
 app.use(express.static("public"));
@@ -9,6 +10,7 @@ app.use("/node_modules", express.static('node_modules'));
 
 // changes it so render doesnt need to have ejs extension
 // app.set("view engine", "ejs");
+app.use(bodyParser.json());
 
 // ejs templating example
 app.get("/", function(req, res){
@@ -26,7 +28,9 @@ app.get("/todo", function(req, res){
 
 // adds todos
 app.post("/todo", function(req, res){
-  
+  var newTodo = req.body.todo;
+  todos.push(newTodo);
+  res.send()
 });
 
 // edits todos

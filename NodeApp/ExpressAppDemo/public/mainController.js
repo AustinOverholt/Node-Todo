@@ -23,7 +23,20 @@
 
         function _addTodo() {
             console.log('add todo clicked');
-            mainService.post('todo', vm.input);
+            console.log(vm.input);
+            mainService.post('todo', vm.input)
+                .then(_postSuccess)
+                .catch(_postFailed);
+
+            function _postSuccess(res) {
+                console.log(res);
+                _getTodo();
+            }
+
+            function _postFailed(err) {
+                console.log(err);
+            }
+            
         }
 
         function _getTodo() {
