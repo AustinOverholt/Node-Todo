@@ -30,7 +30,7 @@ app.get("/todo", function(req, res){
 app.post("/todo", function(req, res){
   var newTodo = req.body.todo;
   todos.push(newTodo);
-  res.send()
+  res.send('Successfully posted');
 });
 
 // edits todos
@@ -39,8 +39,10 @@ app.put("/todo", function(req, res){
 });
 
 // deletes todos
-app.delete("/todo", function(req, res){
-  
+app.delete("/todo/:id", function(req, res){
+  var deleteTodo = req.params.id;
+  todos.splice(deleteTodo, 1);
+  res.send('Successfully Deleted');
 });
 // added a post 
 app.post("/post", function(req, res){

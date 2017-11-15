@@ -41,7 +41,7 @@
 
         function _getTodo() {
             console.log('get todo ran');
-            mainService.get('todo')
+            mainService.get('todo/')
                 .then(_getSuccess)
                 .catch(_getFailed)
 
@@ -63,13 +63,23 @@
 
         function _editTodo() {
             console.log('edit todo clicked');
-
+            mainService.put('todo/');
             // run put on edit button
         }
 
-        function _deleteTodo() {
+        function _deleteTodo(index) {
             console.log('delete todo clicked');
-            mainService.delete('')
+            mainService.delete('todo/', index)
+                .then(_deleteSuccess)
+                .catch(_deleteFailed)
+
+            function _deleteSuccess(res) {
+                console.log(res);
+            }
+
+            function _deleteFailed(err) {
+                console.log(err);
+            }
         }
 
 
