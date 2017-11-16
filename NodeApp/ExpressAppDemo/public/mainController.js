@@ -74,6 +74,7 @@
                 .catch(_deleteFailed)
 
             function _deleteSuccess(res) {
+                vm.todos.splice(index, 1);
                 console.log(res);
             }
 
