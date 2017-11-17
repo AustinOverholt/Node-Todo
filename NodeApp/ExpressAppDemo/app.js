@@ -26,6 +26,14 @@ app.get("/todo", function(req, res){
   res.send(todos);
 });
 
+// get by id
+app.get("/todo/:id", function(req, res){
+  var id = req.params.id;
+  var selectedTodo = todos[id];
+  console.log(selectedTodo);
+  res.send(selectedTodo);
+});
+
 // adds todos
 app.post("/todo", function(req, res){
   var newTodo = req.body.todo;
@@ -34,7 +42,12 @@ app.post("/todo", function(req, res){
 });
 
 // edits todos
-app.put("/todo", function(req, res){
+app.put("/todo/:id", function(req, res){
+  var todoIndex = req.params.id;
+  var todoData = req.body.todo;
+  console.log(todoIndex, todoData);
+
+  todos[todoIndex] = todoData;
   
 });
 

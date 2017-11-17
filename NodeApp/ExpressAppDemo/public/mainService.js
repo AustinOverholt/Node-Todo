@@ -87,8 +87,8 @@
             }
     
             // PUT
-            function _put(apiendpoint, data) {
-                return $http.put(apiendpoint, data)
+            function _put(apiendpoint, id, data) {
+                return $http.put(apiendpoint + id, data)
                     .then(_putComplete)
                     .catch(_putFailed);
     
