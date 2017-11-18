@@ -40,9 +40,9 @@
 
             function _postSuccess(res) {
                 console.log(res);
-                vm.input = "";
+                vm.input = {};
                 vm.edit = false;
-                _getTodo();
+                _init();
             }
 
             function _postFailed(err) {
