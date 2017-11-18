@@ -47,8 +47,10 @@ app.put("/todo/:id", function(req, res){
   var todoData = req.body.todo;
   console.log(todoIndex, todoData);
 
+
+
   todos[todoIndex] = todoData;
-  
+  res.send('Put Success');
 });
 
 // deletes todos

@@ -40,7 +40,7 @@
 
             function _postSuccess(res) {
                 console.log(res);
-                vm.input = {};
+                vm.input;
                 vm.edit = false;
                 _init();
             }
@@ -81,8 +81,7 @@
                 console.log(res.data);
                 vm.edit = index;
                 console.log(vm.edit);
-                vm.input = {todo: res.data}; 
-                console.log(res);
+                vm.input.todo = res.data; 
             }
              
             function _getFailure(err) {
