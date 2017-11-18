@@ -43,13 +43,17 @@ app.post("/todo", function(req, res){
 
 // edits todos
 app.put("/todo/:id", function(req, res){
+  // take id parameter from url 
   var todoIndex = req.params.id;
+
+  // take new todo from body
   var todoData = req.body.todo;
-  console.log(todoIndex, todoData);
 
-
-
+  // use index to change todo
   todos[todoIndex] = todoData;
+
+  // always send a response
+  // or else you will get nothing back
   res.send('Put Success');
 });
 
