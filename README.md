@@ -1,6 +1,7 @@
-# NodeApp
+# Node-Todo
 
-I am creating a new Node application from the ground up.
+I created a simple todo list running in Node with Express.
+It's written in AngularJs and I'm using Bootstrap as well.
 
-I have AngularJs running In Express
+
 
